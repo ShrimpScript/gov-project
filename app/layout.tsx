@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Merriweather, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const inter = Inter({
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={`${inter.variable} ${merriweather.variable} antialiased bg-white text-black`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
