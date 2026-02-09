@@ -21,11 +21,22 @@ const slugify = (text: string) => {
         .replace(/-+$/, '');
 };
 
+import AmendmentDifficulty from '@/components/mdx/AmendmentDifficulty';
+import PreambleAnnotator from '@/components/mdx/PreambleAnnotator';
+import KingVsPresident from '@/components/mdx/KingVsPresident';
+import ConstitutionStructure from '@/components/mdx/ConstitutionStructure';
+import CaseStudy from '@/components/mdx/CaseStudy';
+
 // Custom MDX Components to handle auto-ids for headings
 const components = {
     StatCard,
     QuoteBlock,
     ComparisonChart,
+    AmendmentDifficulty,
+    PreambleAnnotator,
+    KingVsPresident,
+    ConstitutionStructure,
+    CaseStudy,
     h2: ({ children }: any) => {
         const id = slugify(typeof children === 'string' ? children : '');
         return <h2 id={id} className="text-2xl font-serif font-bold mt-12 mb-6">{children}</h2>;
