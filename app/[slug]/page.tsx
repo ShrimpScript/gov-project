@@ -26,6 +26,7 @@ import PreambleAnnotator from '@/components/mdx/PreambleAnnotator';
 import KingVsPresident from '@/components/mdx/KingVsPresident';
 import ConstitutionStructure from '@/components/mdx/ConstitutionStructure';
 import CaseStudy from '@/components/mdx/CaseStudy';
+import Term from '@/components/mdx/Term';
 
 // Custom MDX Components to handle auto-ids for headings
 const components = {
@@ -37,6 +38,7 @@ const components = {
     KingVsPresident,
     ConstitutionStructure,
     CaseStudy,
+    Term,
     h2: ({ children }: any) => {
         const id = slugify(typeof children === 'string' ? children : '');
         return <h2 id={id} className="text-2xl font-serif font-bold mt-12 mb-6">{children}</h2>;
