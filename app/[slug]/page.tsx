@@ -27,6 +27,7 @@ import KingVsPresident from '@/components/mdx/KingVsPresident';
 import ConstitutionStructure from '@/components/mdx/ConstitutionStructure';
 import CaseStudy from '@/components/mdx/CaseStudy';
 import Term from '@/components/mdx/Term';
+import SeparationOfPowers from '@/components/mdx/SeparationOfPowers';
 
 // Custom MDX Components to handle auto-ids for headings
 const components = {
@@ -39,6 +40,7 @@ const components = {
     ConstitutionStructure,
     CaseStudy,
     Term,
+    SeparationOfPowers,
     h2: ({ children }: any) => {
         const id = slugify(typeof children === 'string' ? children : '');
         return <h2 id={id} className="text-2xl font-serif font-bold mt-12 mb-6">{children}</h2>;
