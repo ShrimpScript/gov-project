@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-merriweather);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Custom Grayscale Prose adjustments if needing deep customisation, 
+   but 'prose-neutral' or 'prose-gray' usually works well. 
+   We will force black headings. */
+@utility prose-bv {
+  @apply prose prose-neutral prose-headings:font-serif prose-headings:font-bold prose-headings:text-black prose-p:text-gray-800 prose-a:text-black prose-a:underline prose-a:decoration-gray-400 hover:prose-a:decoration-black;
+}
