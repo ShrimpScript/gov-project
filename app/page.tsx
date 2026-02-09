@@ -30,41 +30,41 @@ export default function Home() {
           {/* Column 1: The Foundation (Left Sidebar) */}
           <div className="lg:col-span-3 pr-4">
             <Link href="/q1-written-constitution" className="group block mb-8">
-              <h4 className="font-sans font-bold text-xs uppercase text-gray-500 mb-2">The Foundation</h4>
-              <h2 className="text-2xl font-bold mb-3 group-hover:underline">The Written Constitution</h2>
+              <h4 className="font-sans font-bold text-xs uppercase text-gray-500 mb-2 transition-colors duration-300 group-hover:text-gray-900">The Foundation</h4>
+              <h2 className="text-2xl font-bold mb-3 group-hover:underline decoration-1 underline-offset-4 decoration-gray-400">The Written Constitution</h2>
               <p className="text-sm text-gray-700 leading-relaxed mb-3">
                 The written constitution mainly serves as a reference point for modern-day politics to provide clear definitions of the structure of the government, distribution of power and the fundamental rights of citizens.
               </p>
-              <div className="text-xs font-sans font-bold text-gray-400 uppercase">See Page 1</div>
+              <div className="text-xs font-sans font-bold text-gray-400 uppercase transition-colors duration-300 group-hover:text-black">See Page 1 &rarr;</div>
             </Link>
 
             <div className="w-12 h-px bg-black my-6"></div>
 
             <Link href="/q5-limiting-power" className="group block">
-              <h4 className="font-sans font-bold text-xs uppercase text-gray-500 mb-2">Structure</h4>
-              <h2 className="text-xl font-bold mb-3 group-hover:underline">Limiting Power</h2>
+              <h4 className="font-sans font-bold text-xs uppercase text-gray-500 mb-2 transition-colors duration-300 group-hover:text-gray-900">Structure</h4>
+              <h2 className="text-xl font-bold mb-3 group-hover:underline decoration-1 underline-offset-4 decoration-gray-400">Limiting Power</h2>
               <p className="text-sm text-gray-700 leading-relaxed mb-3">
                 The Constitution both grants and restricts power. The Founders didn't trust future people to not abuse their power, so they created a system where power is separated and distributed.
               </p>
-              <div className="text-xs font-sans font-bold text-gray-400 uppercase">See Page 5</div>
+              <div className="text-xs font-sans font-bold text-gray-400 uppercase transition-colors duration-300 group-hover:text-black">See Page 5 &rarr;</div>
             </Link>
           </div>
 
           {/* Column 2: Main Story (Center) */}
           <div className="lg:col-span-6 px-4">
             <Link href="/q6-modern-relevance" className="group block text-center">
-              <h4 className="font-sans font-bold text-xs uppercase text-gray-500 mb-4 px-2 bg-white inline-block relative z-10">
+              <h4 className="font-sans font-bold text-xs uppercase text-gray-500 mb-4 px-2 bg-white inline-block relative z-10 transition-colors duration-300 group-hover:text-black border border-transparent group-hover:border-gray-200">
                 Lead Analysis
               </h4>
-              <h2 className="text-4xl md:text-5xl font-black mb-6 italic leading-tight group-hover:underline decoration-2 underline-offset-4">
+              <h2 className="text-3xl md:text-5xl font-black mb-6 italic leading-tight group-hover:underline decoration-2 underline-offset-4 decoration-black transition-all duration-300">
                 "A Republic, If You Can Keep It"
               </h2>
 
-              <div className="aspect-video w-full bg-gray-100 mb-6 relative grayscale border border-gray-200 overflow-hidden">
+              <div className="aspect-video w-full bg-gray-100 mb-6 relative grayscale border border-gray-200 overflow-hidden group-hover:shadow-lg transition-shadow duration-500">
                 <img
                   src="/images/immigrants-make-america-great-again-bv3-800x533.jpg"
                   alt="Immigrants Make America Great"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
 
@@ -79,7 +79,7 @@ export default function Home() {
               </div>
 
               <div className="mt-8 text-center">
-                <button className="bg-black text-white font-sans font-bold text-xs uppercase px-6 py-3 tracking-widest hover:bg-gray-800 transition-colors">
+                <button className="bg-black text-white font-sans font-bold text-xs uppercase px-6 py-3 tracking-widest hover:bg-gray-800 transition-all duration-300 hover:scale-105 active:scale-95 shadow-md hover:shadow-lg">
                   Read the Full Report
                 </button>
               </div>
@@ -94,7 +94,7 @@ export default function Home() {
               </h4>
               <ul className="space-y-3 text-sm">
                 <li>
-                  <span className="font-bold block text-gray-900">Q1. Written Constitution</span>
+                  <span className="font-bold block text-gray-900 group-hover:text-blue-900 transition-colors">Q1. Written Constitution</span>
                   <span className="text-gray-500 text-xs">Why is it important?</span>
                 </li>
                 <li>
@@ -113,11 +113,11 @@ export default function Home() {
             </div>
 
             <Link href="/q4-founder-concerns" className="group block">
-              <div className="border-b-4 border-black mb-4 pb-1">
-                <h4 className="font-sans font-bold text-xs uppercase">Historical Context</h4>
+              <div className="border-b-4 border-black mb-4 pb-1 transition-colors duration-300 group-hover:border-gray-600">
+                <h4 className="font-sans font-bold text-xs uppercase transition-colors duration-300 group-hover:text-gray-600">Historical Context</h4>
               </div>
-              <h2 className="text-3xl font-bold mb-4 group-hover:underline">Founder Concerns</h2>
-              <div className="italic text-gray-500 text-sm mb-4">
+              <h2 className="text-3xl font-bold mb-4 group-hover:underline decoration-1 underline-offset-4 decoration-gray-400">Founder Concerns</h2>
+              <div className="italic text-gray-500 text-sm mb-4 group-hover:text-gray-800 transition-colors">
                 Were they right to be worried?
               </div>
               <p className="text-sm text-gray-700 leading-relaxed">
