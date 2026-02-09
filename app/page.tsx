@@ -1,140 +1,138 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ArrowRight, ChevronRight, PenTool } from "lucide-react";
 
 export default function Home() {
-  const articles = [
-    {
-      slug: "q1-written-constitution",
-      title: "The Written Constitution",
-      description: "Why is it important to have a written constitution and a mission statement?",
-      number: "01",
-      category: "Foundations",
-    },
-    {
-      slug: "q4-founder-concerns",
-      title: "Founder Concerns",
-      description: "What were the concerns of the Founders? Were they right to be worried?",
-      number: "04",
-      category: "History",
-    },
-    {
-      slug: "q5-limiting-power",
-      title: "Limiting Federal Power",
-      description: "How does the Constitution limit the power of the federal government?",
-      number: "05",
-      category: "Structure",
-    },
-    {
-      slug: "q6-modern-relevance",
-      title: "Modern Relevance",
-      description: "Are the beliefs by the founders being lived up to today?",
-      number: "06",
-      category: "Analysis",
-    },
-  ];
+  const date = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-black selection:bg-black selection:text-white">
+    <div className="min-h-screen flex flex-col bg-white text-black font-serif">
       <Header />
 
-      <main className="flex-grow">
-        {/* Editorial Hero */}
-        <section className="relative pt-32 pb-24 px-6 border-b border-gray-900">
-          <div className="container mx-auto max-w-5xl">
-            <div className="flex flex-col md:flex-row items-end justify-between gap-8 mb-12">
-              <div>
-                <span className="font-bold text-xs uppercase tracking-[0.3em] text-gray-400 mb-4 block">
-                  American Government • Unit 1 Project
-                </span>
-                <h1 className="font-serif text-6xl md:text-8xl font-black tracking-tighter leading-[0.9]">
-                  American<br />
-                  Democracy<br />
-                  <span className="italic font-light text-gray-600">Defined.</span>
-                </h1>
-              </div>
-              <div className="md:text-right pb-2">
-                <div className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-1">
-                  Analysis By
-                </div>
-                <div className="text-2xl font-serif font-bold italic border-b-2 border-black inline-block pb-1">
-                  Ezekiel Smits
-                </div>
-              </div>
-            </div>
+      <main className="flex-grow container mx-auto px-4 md:px-8 max-w-7xl">
 
-            <div className="h-px w-full bg-gray-200 mb-12" />
+        {/* Masthead */}
+        <header className="text-center py-8 border-b-4 border-black mb-8">
+          <h1 className="font-lodeh text-6xl md:text-8xl mb-4 leading-tight">
+            American Democracy Defined
+          </h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              <div className="md:col-span-2">
-                <p className="text-xl md:text-2xl font-serif leading-relaxed text-gray-800">
-                  An exploration of the fundamental principles that shaped a nation. From the rigidity of the written word to the enduring fears of the Founders, this project analyzes the core questions of American governance.
+          <div className="flex justify-between items-center border-t border-b border-black py-2 text-xs md:text-sm font-bold uppercase tracking-widest font-sans text-gray-600">
+            <span>Vol. I, No. 1</span>
+            <span>{date}</span>
+            <span>Unit 1 Project — Analysis by Ezekiel Smits</span>
+          </div>
+        </header>
+
+        {/* Newspaper Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 divide-y lg:divide-y-0 lg:divide-x divide-gray-300">
+
+          {/* Column 1: The Foundation (Left Sidebar) */}
+          <div className="lg:col-span-3 pr-4">
+            <Link href="/q1-written-constitution" className="group block mb-8">
+              <h4 className="font-sans font-bold text-xs uppercase text-gray-500 mb-2">The Foundation</h4>
+              <h2 className="text-2xl font-bold mb-3 group-hover:underline">The Written Constitution</h2>
+              <p className="text-sm text-gray-700 leading-relaxed mb-3">
+                The written constitution mainly serves as a reference point for modern-day politics to provide clear definitions of the structure of the government, distribution of power and the fundamental rights of citizens.
+              </p>
+              <div className="text-xs font-sans font-bold text-gray-400 uppercase">See Page 1</div>
+            </Link>
+
+            <div className="w-12 h-px bg-black my-6"></div>
+
+            <Link href="/q5-limiting-power" className="group block">
+              <h4 className="font-sans font-bold text-xs uppercase text-gray-500 mb-2">Structure</h4>
+              <h2 className="text-xl font-bold mb-3 group-hover:underline">Limiting Power</h2>
+              <p className="text-sm text-gray-700 leading-relaxed mb-3">
+                The Constitution both grants and restricts power. The Founders didn't trust future people to not abuse their power, so they created a system where power is separated and distributed.
+              </p>
+              <div className="text-xs font-sans font-bold text-gray-400 uppercase">See Page 5</div>
+            </Link>
+          </div>
+
+          {/* Column 2: Main Story (Center) */}
+          <div className="lg:col-span-6 px-4">
+            <Link href="/q6-modern-relevance" className="group block text-center">
+              <h4 className="font-sans font-bold text-xs uppercase text-gray-500 mb-4 px-2 bg-white inline-block relative z-10">
+                Lead Analysis
+              </h4>
+              <h2 className="text-4xl md:text-5xl font-black mb-6 italic leading-tight group-hover:underline decoration-2 underline-offset-4">
+                "A Republic, If You Can Keep It"
+              </h2>
+
+              <div className="aspect-video w-full bg-gray-100 mb-6 relative grayscale border border-gray-200">
+                {/* Placeholder for a main hero image if desired, or just texture */}
+                <div className="absolute inset-0 flex items-center justify-center text-gray-400 italic">
+                  (Modern Relevance Visual)
+                </div>
+              </div>
+
+              <div className="text-left columns-1 md:columns-2 gap-8 text-lg leading-relaxed text-gray-800">
+                <p>
+                  <span className="float-left text-5xl font-lodeh pr-2 leading-[0.8]">A</span>
+                  re the beliefs by the founders being lived up to today? The main beliefs of the Founding Fathers were republicanism, separation of powers, checks and balances, and the fear of tyranny.
+                </p>
+                <p className="mt-4 md:mt-0">
+                  While some of their expectations may have been exceeded in the modern day, there are clear events happening today that the Founding Fathers feared would happen.
                 </p>
               </div>
-              <div className="flex flex-col justify-end">
-                <span className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">In This Issue</span>
-                <ul className="space-y-2">
-                  {articles.map(a => (
-                    <li key={a.slug} className="flex items-center text-sm font-bold border-b border-gray-100 pb-2">
-                      <span className="text-gray-400 w-6">{a.number}</span>
-                      <span>{a.title}</span>
-                    </li>
-                  ))}
-                </ul>
+
+              <div className="mt-8 text-center">
+                <button className="bg-black text-white font-sans font-bold text-xs uppercase px-6 py-3 tracking-widest hover:bg-gray-800 transition-colors">
+                  Read the Full Report
+                </button>
               </div>
+            </Link>
+          </div>
+
+          {/* Column 3: The Debate (Right Sidebar) */}
+          <div className="lg:col-span-3 pl-4">
+            <div className="bg-gray-50 border border-gray-200 p-4 mb-8">
+              <h4 className="font-sans font-bold text-xs uppercase text-gray-500 mb-3 border-b border-gray-200 pb-1">
+                In This Issue
+              </h4>
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <span className="font-bold block text-gray-900">Q1. Written Constitution</span>
+                  <span className="text-gray-500 text-xs">Why is it important?</span>
+                </li>
+                <li>
+                  <span className="font-bold block text-gray-900">Q4. Founder Concerns</span>
+                  <span className="text-gray-500 text-xs">Were they right?</span>
+                </li>
+                <li>
+                  <span className="font-bold block text-gray-900">Q5. Limiting Power</span>
+                  <span className="text-gray-500 text-xs">Checks & Balances</span>
+                </li>
+                <li>
+                  <span className="font-bold block text-gray-900">Q6. Modern Relevance</span>
+                  <span className="text-gray-500 text-xs">Are values lived up to?</span>
+                </li>
+              </ul>
+            </div>
+
+            <Link href="/q4-founder-concerns" className="group block">
+              <div className="border-b-4 border-black mb-4 pb-1">
+                <h4 className="font-sans font-bold text-xs uppercase">Historical Context</h4>
+              </div>
+              <h2 className="text-3xl font-bold mb-4 group-hover:underline">Founder Concerns</h2>
+              <div className="italic text-gray-500 text-sm mb-4">
+                Were they right to be worried?
+              </div>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                The Anti-Federalists were terrified that a strong federal government would just become a "new monarchy" in disguise. They argued that the "Necessary and Proper" clause would let Congress pass literally any law they wanted.
+              </p>
+            </Link>
+
+            <div className="bg-gray-100 p-4 mt-8 border border-gray-200 text-center">
+              <h5 className="font-sans font-bold text-xs uppercase text-gray-500 mb-2">Quote of the Day</h5>
+              <p className="font-serif italic text-lg mb-2">"If men were angels, no government would be necessary."</p>
+              <cite className="not-italic text-xs font-bold text-gray-800">— James Madison</cite>
             </div>
           </div>
-        </section>
 
-        {/* Featured Articles Grid */}
-        <section className="">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            {articles.map((article, index) => (
-              <Link
-                key={article.slug}
-                href={`/${article.slug}`}
-                className={`
-                    group relative block p-12 md:p-20 border-b border-r border-gray-200 hover:bg-gray-50 transition-all duration-500
-                    ${index % 2 === 0 ? 'border-r' : 'border-r-0 md:border-r'}
-                  `}
-              >
-                <div className="absolute top-8 left-8 text-xs font-bold uppercase tracking-widest text-gray-300">
-                  {article.category}
-                </div>
-                <div className="absolute top-8 right-8 text-xs font-serif font-italic text-gray-300">
-                  No. {article.number}
-                </div>
+        </div>
 
-                <div className="mt-12">
-                  <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 group-hover:underline decoration-1 underline-offset-8 decoration-gray-300">
-                    {article.title}
-                  </h2>
-                  <p className="text-gray-500 text-lg mb-10 font-light leading-relaxed max-w-md">
-                    {article.description}
-                  </p>
-
-                  <div className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest border-b border-black pb-1 group-hover:gap-4 transition-all">
-                    Read Analysis <ArrowRight className="w-4 h-4" />
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* Closing Statement */}
-        <section className="py-32 bg-black text-white px-6 text-center">
-          <div className="container mx-auto max-w-2xl">
-            <PenTool className="w-12 h-12 mx-auto mb-8 text-gray-500" />
-            <h3 className="font-serif text-3xl md:text-4xl font-bold mb-6">
-              "If men were angels, no government would be necessary."
-            </h3>
-            <p className="text-gray-400 font-mono text-sm uppercase tracking-widest">
-              — James Madison, Federalist No. 51
-            </p>
-          </div>
-        </section>
       </main>
 
       <Footer />

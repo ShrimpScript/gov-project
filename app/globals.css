@@ -1,25 +1,39 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@font-face {
+  font-family: 'Lodeh';
+  src: url('/fonts/lodeh-regular-font/Lodeh-VGLD6.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @theme {
-  --font-sans: var(--font-inter);
-  --font-serif: var(--font-merriweather);
+  --font-serif: Georgia, 'Times New Roman', Times, serif;
+  --font-lodeh: 'Lodeh', Georgia, serif;
 }
 
 :root {
   --background: #ffffff;
-  --foreground: #000000;
+  --foreground: #171717;
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  background: var(--background);
+  font-family: var(--font-serif);
 }
 
-/* Custom Grayscale Prose adjustments if needing deep customisation, 
-   but 'prose-neutral' or 'prose-gray' usually works well. 
-   We will force black headings. */
-@utility prose-bv {
-  @apply prose prose-neutral prose-headings:font-serif prose-headings:font-bold prose-headings:text-black prose-p:text-gray-800 prose-a:text-black prose-a:underline prose-a:decoration-gray-400 hover:prose-a:decoration-black;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: bold;
+}
+
+.font-lodeh {
+  font-family: var(--font-lodeh);
 }
