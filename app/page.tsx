@@ -60,11 +60,12 @@ export default function Home() {
                 "A Republic, If You Can Keep It"
               </h2>
 
-              <div className="aspect-video w-full bg-gray-100 mb-6 relative grayscale border border-gray-200">
-                {/* Placeholder for a main hero image if desired, or just texture */}
-                <div className="absolute inset-0 flex items-center justify-center text-gray-400 italic">
-                  (Modern Relevance Visual)
-                </div>
+              <div className="aspect-video w-full bg-gray-100 mb-6 relative grayscale border border-gray-200 overflow-hidden">
+                <img
+                  src="/images/immigrants-make-america-great-again-bv3-800x533.jpg"
+                  alt="Immigrants Make America Great"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               <div className="text-left columns-1 md:columns-2 gap-8 text-lg leading-relaxed text-gray-800">
